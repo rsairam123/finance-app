@@ -1,0 +1,11 @@
+body { margin: 0; font-family: -apple-system, "Segoe UI", sans-serif; background: #f4f4f4; color: #161616; }
+.container { max-width: 960px; margin: 0 auto; padding: 24px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 16px; }
+.card { background: #fff; padding: 16px; border-radius: 6px; }
+.price { font-size: 28px; font-weight: 600; margin: 4px 0; }
+.muted { color: #6f6f6f; font-size: 13px; }
+.up { color: #24a148; }
+.down { color: #da1e28; }
+.tabs { margin: 16px 0; display: flex; gap: 8px; }
+.tabs button { padding: 8px 16px; border: 1px solid #0f62fe; background: #fff; color: #0f62fe; cursor: pointer; }
+.tabs button.active { background: #0f62fe; color: #fff; }
