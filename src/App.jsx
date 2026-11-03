@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { loadDashboard } from './services/financeService.js';
 import SummaryCard from './components/SummaryCard.jsx';
 import TrendChart from './components/TrendChart.jsx';
+import CompanyChart from './components/CompanyChart.jsx';
 
 const VIEWS = [
   { id: 'day', label: 'Current day' },
@@ -38,6 +39,7 @@ export default function App() {
       ) : (
         <TrendChart items={items} view={view} />
       )}
+      <CompanyChart />
     </div>
   );
 }

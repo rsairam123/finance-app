@@ -9,3 +9,8 @@ body { margin: 0; font-family: -apple-system, "Segoe UI", sans-serif; background
 .tabs { margin: 16px 0; display: flex; gap: 8px; }
 .tabs button { padding: 8px 16px; border: 1px solid #0f62fe; background: #fff; color: #0f62fe; cursor: pointer; }
 .tabs button.active { background: #0f62fe; color: #fff; }
+.company { margin-top: 32px; }
+.company-form { display: flex; gap: 8px; margin: 12px 0; }
+.company-form input { padding: 8px 12px; border: 1px solid #8d8d8d; min-width: 200px; }
+.company-form button { padding: 8px 16px; border: 1px solid #0f62fe; background: #0f62fe; color: #fff; cursor: pointer; }
+.company-form button:disabled { opacity: 0.6; cursor: default; }
