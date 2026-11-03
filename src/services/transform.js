@@ -32,3 +32,13 @@ export function buildViews({ symbol, price, prevClose, history }) {
     quarter: { series: history, changePct: history.length ? pct(history[0].close, current) : 0 },
   };
 }
+
+/** Validate user input for a ticker symbol: 1-5 letters (A-Z). */
+export function validateTicker(input) {
+  const symbol = String(input ?? '').trim().toUpperCase();
+  if (!symbol) return { ok: false, error: 'Enter a ticker symbol.' };
+  if (!/^[A-Z]{1,5}$/.test(symbol)) {
+    return { ok: false, error: `"${symbol}" is not a valid ticker. Use 1-5 letters, e.g. AAPL.` };
+  }
+  return { ok: true, symbol };
+}

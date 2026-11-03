@@ -1,5 +1,11 @@
 // Deterministic sample data used when Yahoo Finance is unreachable.
-const BASE = { IBM: 230, MSFT: 420, ORCL: 170, SAP: 240, CRM: 280 };
+const BASE = {
+  IBM: 230, MSFT: 420, ORCL: 170, SAP: 240, CRM: 280,
+  AAPL: 225, GOOGL: 175, AMZN: 200, NVDA: 140, TSLA: 250,
+};
+
+/** True when sample data exists for the symbol (used as offline fallback). */
+export const hasMock = (symbol) => symbol in BASE;
 
 export function mockChart(symbol) {
   const base = BASE[symbol] ?? 100;
